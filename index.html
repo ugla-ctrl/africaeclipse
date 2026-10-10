@@ -394,7 +394,7 @@
       var done = false;
       function finish() {
         if (done) return; done = true;
-        form.innerHTML = '<p style="font-size:17px;color:var(--ink)">You&rsquo;re on the list. We&rsquo;ll be in touch as the path and the gathering take shape.</p>';
+        form.innerHTML = '<p style="font-size:17px;color:var(--ink)">You&rsquo;re on the list and we&rsquo;ll be in touch.</p><p style="font-size:14px;color:var(--ink-soft);margin-top:10px">Want to connect before then? <a href="mailto:howzit@africaeclipse.com" style="color:var(--gold);text-decoration:underline">howzit@africaeclipse.com</a></p>';
       }
       try {
         cio.identify(email, traits);
