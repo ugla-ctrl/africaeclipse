@@ -71,8 +71,17 @@
     display: flex; align-items: center; justify-content: center;
     padding: 96px 16px 72px;
     text-align: center; overflow: hidden;
-    background: var(--bg) url("assets/hero-spitzkoppe.jpg") center 62% / cover no-repeat;
+    background: var(--bg);
   }
+  .hero-bg { position: absolute; inset: 0; overflow: hidden; }
+  .hero-bg .slide {
+    position: absolute; inset: 0;
+    background: center 58% / cover no-repeat;
+    opacity: 0;
+    transition: opacity 2.6s ease;
+    will-change: opacity;
+  }
+  .hero-bg .slide.is-active { opacity: 1; }
   .hero::before {
     content: ""; position: absolute; inset: 0;
     background:
@@ -242,6 +251,14 @@
 </nav>
 
 <header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="slide is-active" style="background-image:url('assets/hero-spitzkoppe.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-sossusvlei.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-kgalagadi.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-afriski-lesotho.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-durban.jpg')"></div>
+    <div class="slide" style="background-image:url('assets/hero-windhoek.jpg')"></div>
+  </div>
   <svg class="hero-map" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="m-band" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9b45c" stop-opacity="0.05"/><stop offset="0.5" stop-color="#ff8a1e" stop-opacity="0.16"/><stop offset="1" stop-color="#e9b45c" stop-opacity="0.05"/></linearGradient>
@@ -376,6 +393,18 @@
       } catch (err) { /* fall through */ }
       setTimeout(finish, 2500); // don't leave people waiting if the tracker is blocked
     });
+  })();
+</script>
+<script>
+  (function () {
+    var slides = document.querySelectorAll('.hero-bg .slide');
+    if (slides.length < 2) return;
+    var i = 0;
+    setInterval(function () {
+      slides[i].classList.remove('is-active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('is-active');
+    }, 6000);
   })();
 </script>
 </body>
