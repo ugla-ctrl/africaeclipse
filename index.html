@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Africa Eclipse 2030 | Total Solar Eclipse, November 25, 2030</title>
+<meta name="description" content="On 25 November 2030 a total solar eclipse crosses Namibia, Botswana, South Africa and Lesotho at dawn. Africa Eclipse 2030 is a gathering beneath it, built by the people who show up.">
+<meta name="theme-color" content="#14100c">
+<link rel="canonical" href="https://africaeclipse.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://africaeclipse.com/">
+<meta property="og:site_name" content="Africa Eclipse 2030">
+<meta property="og:title" content="Africa Eclipse 2030 | November 25, 2030">
+<meta property="og:description" content="A total solar eclipse at dawn across Namibia, Botswana, South Africa and Lesotho. Find your place, and help shape the gathering.">
+<meta property="og:image" content="https://africaeclipse.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Africa Eclipse 2030: the path of totality over southern Africa, above Spitzkoppe at dawn">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Africa Eclipse 2030 | November 25, 2030">
+<meta name="twitter:description" content="A total solar eclipse at dawn across Namibia, Botswana, South Africa and Lesotho. Find your place, and help shape the gathering.">
+<meta name="twitter:image" content="https://africaeclipse.com/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14100c;
+    --ink: #f3efe6;
+    --ink-soft: rgba(243, 239, 230, 0.82);
+    --ink-quiet: rgba(243, 239, 230, 0.6);
+    --gold: #e9b45c;
+    --accent: #ff8a1e;
+    --accent-ink: #17120b;
+    --line: rgba(243, 239, 230, 0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Nav */
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 10;
+    display: flex; align-items: center; gap: 14px;
+    height: 66px; padding: 0 32px;
+    background: rgba(20, 16, 12, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .mark {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, #0b0806 54%, #ffd89a 58%, rgba(255, 138, 30, 0.35) 66%, transparent 72%);
+    box-shadow: 0 0 0 1px rgba(233, 180, 92, 0.6);
+    flex: none;
+  }
+  .wordmark {
+    font-size: 14px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative; min-height: 100vh; min-height: 100svh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 96px 16px 72px;
+    text-align: center; overflow: hidden;
+    background: var(--bg) url("assets/hero-spitzkoppe.jpg") center 62% / cover no-repeat;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(20, 16, 12, 0.74) 0%, rgba(20, 16, 12, 0.58) 38%, rgba(20, 16, 12, 0.66) 72%, rgba(20, 16, 12, 0.92) 100%);
+  }
+  .hero-inner { position: relative; max-width: 1200px; }
+  .kicker {
+    font-size: 14px; font-weight: 500;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--gold);
+  }
+  h1 {
+    margin-top: 18px;
+    font-family: Fraunces, "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(48px, 7.4vw, 104px);
+    line-height: 1.12; letter-spacing: 0.01em;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+  }
+  .lede {
+    max-width: 660px; margin: 22px auto 0;
+    font-size: 19px; line-height: 1.6;
+    color: var(--ink-soft);
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+  }
+
+
+  /* Path-of-totality map overlay */
+  .hero-map {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  .m-grat { fill: none; stroke: rgba(243, 239, 230, 0.07); stroke-width: 1; }
+  .m-land { fill: rgba(243, 239, 230, 0.03); stroke: rgba(243, 239, 230, 0.26); stroke-width: 1.3; stroke-linejoin: round; }
+  .m-border { fill: none; stroke: rgba(243, 239, 230, 0.16); stroke-width: 1; stroke-dasharray: 3 5; }
+  .m-band { fill: url(#m-band); stroke: rgba(233, 180, 92, 0.32); stroke-width: 1.2; }
+  .m-band-glow { fill: rgba(255, 138, 30, 0.1); }
+  .m-center { fill: none; stroke: rgba(255, 138, 30, 0.45); stroke-width: 1.4; stroke-dasharray: 2 7; stroke-linecap: round; }
+  .m-dot { fill: #e9b45c; fill-opacity: 0.75; }
+  .m-city { font: 600 15px Inter, system-ui, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; fill: rgba(243, 239, 230, 0.4); }
+  .m-country { font: 500 22px Inter, system-ui, sans-serif; letter-spacing: 0.42em; text-transform: uppercase; fill: rgba(243, 239, 230, 0.12); text-anchor: middle; }
+  .m-small { font-size: 15px; letter-spacing: 0.3em; }
+  .m-ocean { font: italic 400 26px Fraunces, Georgia, serif; letter-spacing: 0.08em; fill: rgba(243, 239, 230, 0.2); text-anchor: middle; }
+
+  /* Countdown */
+  .countdown {
+    display: flex; justify-content: center; gap: clamp(20px, 5vw, 52px);
+    margin-top: 34px;
+  }
+  .unit { min-width: 72px; }
+  .num {
+    font-family: Fraunces, Georgia, serif; font-weight: 500;
+    font-size: clamp(44px, 6vw, 64px); line-height: 1;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+  }
+  .label {
+    margin-top: 10px;
+    font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-quiet);
+  }
+  .until { margin-top: 18px; font-size: 13.5px; color: var(--ink-soft); }
+
+  /* Buttons */
+  .ctas {
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    margin-top: 32px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 240px; padding: 13px 28px;
+    border: 0; border-radius: 999px; cursor: pointer; font-family: inherit;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); }
+  .btn-primary:hover { background: #ff9d43; }
+  .btn-ghost { border: 1px solid var(--accent); color: var(--accent); }
+  .btn-ghost:hover { background: rgba(255, 138, 30, 0.12); }
+
+  /* Footer details */
+  .place {
+    position: absolute; left: 28px; bottom: 22px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .place::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold); box-shadow: 0 0 10px var(--gold);
+  }
+  .powered {
+    position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; color: rgba(243, 239, 230, 0.62); white-space: nowrap;
+  }
+  .powered img { display: block; height: 17px; width: auto; opacity: 0.82; transition: opacity 0.15s ease; }
+  .powered a:hover img { opacity: 1; }
+
+  /* Get updates modal */
+  .modal {
+    position: fixed; inset: 0; z-index: 20;
+    display: none; align-items: center; justify-content: center;
+    padding: 16px; background: rgba(10, 8, 6, 0.72);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  }
+  .modal.open { display: flex; }
+  .modal-card {
+    position: relative; width: 100%; max-width: 440px;
+    padding: 36px 32px 30px; border-radius: 18px;
+    background: #1c1611; border: 1px solid rgba(233, 180, 92, 0.25);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  .modal-card h2 {
+    font-family: Fraunces, Georgia, serif; font-weight: 500;
+    font-size: 30px; line-height: 1.2;
+  }
+  .modal-card p { margin-top: 10px; color: var(--ink-soft); font-size: 15px; }
+  .modal-close {
+    position: absolute; top: 12px; right: 14px;
+    width: 36px; height: 36px; border: 0; border-radius: 50%;
+    background: transparent; color: var(--ink-quiet); font-size: 24px; line-height: 1; cursor: pointer;
+  }
+  .modal-close:hover { color: var(--ink); background: rgba(243, 239, 230, 0.08); }
+  .signup { display: grid; gap: 12px; margin-top: 22px; text-align: left; }
+  .signup label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-quiet); }
+  .signup input {
+    width: 100%; margin-top: 6px; padding: 12px 14px;
+    border-radius: 10px; border: 1px solid rgba(243, 239, 230, 0.2);
+    background: rgba(243, 239, 230, 0.05); color: var(--ink);
+    font: inherit; font-size: 16px;
+  }
+  .signup input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(233, 180, 92, 0.2); }
+  .signup .btn { width: 100%; margin-top: 6px; border: 0; cursor: pointer; font-family: inherit; }
+  .signup .btn[disabled] { opacity: 0.6; cursor: default; }
+  .form-note { min-height: 20px; font-size: 13.5px; text-align: center; color: var(--ink-soft); }
+  .form-note.error { color: #ff9b7a; }
+  .credit {
+    position: absolute; right: 24px; bottom: 22px;
+    font-size: 11px; color: var(--ink-quiet);
+  }
+  .credit a { text-decoration: underline; text-underline-offset: 2px; }
+
+  @media (max-width: 640px) {
+    .nav { padding: 0 16px; height: 58px; }
+    .wordmark { font-size: 12.5px; }
+    .hero { padding-top: 96px; padding-bottom: 120px; }
+    .kicker { font-size: 11.5px; letter-spacing: 0.24em; }
+    .lede { font-size: 16.5px; }
+    .unit { min-width: 56px; }
+    .label { font-size: 10.5px; letter-spacing: 0.16em; }
+    .place { left: 16px; bottom: 50px; font-size: 11.5px; }
+    .powered { bottom: 18px; }
+    .credit { right: 16px; bottom: 50px; }
+    .m-city, .m-country, .m-ocean { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Site">
+  <span class="mark" aria-hidden="true"></span>
+  <a class="wordmark" href="#top">Africa Eclipse 2030</a>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="hero-map" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="m-band" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9b45c" stop-opacity="0.05"/><stop offset="0.5" stop-color="#ff8a1e" stop-opacity="0.16"/><stop offset="1" stop-color="#e9b45c" stop-opacity="0.05"/></linearGradient>
+      <filter id="m-glow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="16"/></filter>
+    </defs>
+    <path class="m-grat" d="M9,920L9,406L9,-20M181,920L181,406L181,-20M353,920L353,406L353,-20M525,920L525,406L525,-20M696,920L696,406L696,-20M868,920L868,406L868,-20M1040,920L1040,406L1040,-20M1212,920L1212,406L1212,-20M1384,920L1384,406L1384,-20M9,804L95,804L181,804L267,804L353,804L439,804L525,804L610,804L696,804L782,804L868,804L954,804L1040,804L1126,804L1212,804L1298,804L1384,804L1470,804L1556,804M9,600L95,600L181,600L267,600L353,600L439,600L525,600L610,600L696,600L782,600L868,600L954,600L1040,600L1126,600L1212,600L1298,600L1384,600L1470,600L1556,600M9,406L95,406L181,406L267,406L353,406L439,406L525,406L610,406L696,406L782,406L868,406L954,406L1040,406L1126,406L1212,406L1298,406L1384,406L1470,406L1556,406M9,220L95,220L181,220L267,220L353,220L439,220L525,220L610,220L696,220L782,220L868,220L954,220L1040,220L1126,220L1212,220L1298,220L1384,220L1470,220L1556,220M9,40L95,40L181,40L267,40L353,40L439,40L525,40L610,40L696,40L782,40L868,40L954,40L1040,40L1126,40L1212,40L1298,40L1384,40L1470,40L1556,40"/>
+    <path class="m-land" d="M1620,409L1615,412L1611,412L1603,412L1596,415L1587,419L1580,424L1576,426L1573,427L1563,428L1560,427L1549,419L1545,417L1538,416L1535,415L1533,414L1530,410L1524,407L1522,406L1522,403L1521,401L1519,398L1518,392L1516,388L1511,382L1510,379L1510,372L1510,367L1509,358L1510,354L1512,350L1511,346L1509,342L1508,338L1507,334L1501,326L1499,323L1498,319L1496,308L1496,304L1496,295L1497,291L1498,288L1499,286L1500,284L1501,282L1502,280L1504,270L1507,267L1511,266L1514,263L1516,259L1518,252L1523,244L1525,240L1530,234L1533,225L1534,221L1535,217L1536,208L1537,203L1537,199L1535,194L1530,186L1529,185L1530,178L1529,174L1527,169L1525,165L1523,157L1522,145L1522,140L1521,136L1519,132L1521,125L1536,100L1536,97L1536,90L1536,85L1537,84L1538,83L1540,83L1553,81L1554,81L1557,79L1561,75L1563,73L1565,74L1566,76L1567,76L1572,75L1574,75L1576,75L1577,73L1578,71L1578,69L1580,69L1586,68L1590,67L1596,66L1597,66L1601,72L1602,72L1604,73L1605,71L1602,68L1601,67L1601,65L1603,61L1606,58L1613,53L1620,48M1403,-20L1404,-17L1403,-14L1403,-12L1403,-8L1404,-0L1404,8L1405,10L1406,11L1408,12L1408,14L1406,18L1406,20L1406,23L1409,19L1411,19L1412,21L1412,23L1412,24L1412,27L1413,30L1412,32L1411,34L1408,37L1407,40L1408,42L1406,42L1405,44L1406,46L1406,49L1403,56L1395,67L1391,70L1388,74L1388,76L1387,78L1383,83L1379,84L1377,86L1378,91L1376,92L1371,96L1358,104L1356,105L1352,110L1348,111L1346,113L1341,113L1340,113L1338,113L1337,114L1328,117L1320,120L1318,121L1317,123L1310,125L1298,132L1289,138L1282,144L1281,145L1279,147L1278,150L1277,152L1272,158L1265,166L1263,168L1261,172L1260,175L1258,176L1255,173L1254,178L1253,179L1251,178L1246,180L1241,183L1234,189L1225,201L1210,213L1208,213L1207,213L1202,209L1200,209L1202,211L1204,213L1203,217L1203,223L1202,235L1202,237L1204,240L1208,244L1211,249L1216,264L1216,271L1221,280L1221,285L1223,295L1223,303L1223,308L1225,310L1226,308L1226,305L1226,300L1228,298L1229,298L1229,300L1230,303L1231,305L1231,307L1229,318L1229,322L1232,329L1229,338L1225,357L1225,361L1226,362L1228,362L1229,360L1230,360L1231,361L1229,371L1227,375L1221,384L1217,389L1212,393L1199,399L1172,408L1161,413L1155,416L1142,425L1136,430L1134,437L1131,440L1129,444L1131,447L1133,450L1135,452L1137,453L1138,454L1140,449L1140,447L1142,447L1141,454L1139,476L1139,477L1138,485L1133,499L1131,506L1127,529L1122,541L1119,545L1110,554L1107,556L1105,557L1101,558L1086,575L1080,584L1075,596L1070,603L1063,617L1056,628L1050,638L1039,653L1034,657L1031,659L1022,667L1010,680L1001,692L987,705L979,711L967,723L963,725L949,735L940,742L924,750L917,752L902,750L896,751L891,756L890,762L888,763L885,763L874,760L868,761L865,764L862,769L854,769L840,764L823,762L820,761L812,765L809,765L797,765L790,762L784,762L779,764L774,765L758,777L750,777L743,779L739,779L733,777L730,777L727,778L723,780L715,781L711,783L697,795L694,794L691,793L684,793L675,787L672,788L673,786L673,782L672,780L670,779L667,779L665,776L660,776L659,777L656,777L656,774L656,772L656,770L655,766L653,765L652,765L648,765L646,765L645,766L644,769L644,776L642,774L640,770L639,765L640,759L644,757L643,753L643,750L638,742L637,738L633,735L630,729L627,727L626,723L623,719L623,714L624,710L626,709L629,711L632,710L636,706L639,700L639,691L638,685L635,670L633,666L625,655L617,640L605,617L600,604L592,576L584,561L575,546L574,545L570,542L559,530L555,527L549,520L536,497L534,493L532,482L529,474L529,470L530,467L529,463L528,460L523,456L522,442L519,433L520,426L518,420L518,415L519,407L517,398L512,389L507,376L507,370L507,355L506,348L506,341L505,334L504,329L505,326L506,327L507,328L508,323L508,320L506,310L501,300L489,285L486,279L485,274L471,253L466,239L462,227L457,221L437,181L433,174L425,167L423,164L420,157L414,147L412,138L412,128L413,120L414,106L415,100L415,93L414,75L414,72L413,69L416,67L418,65L420,62L422,58L424,48L431,27L434,5L439,-4L440,-15L444,-20"/>
+    <path class="m-border" d="M877,140L871,134L868,131L866,131L859,130L843,128L842,129L835,130L827,131L820,133L813,134L806,128L798,121L790,114L784,108L781,104L776,100L772,98L770,97L767,85L764,74L764,65L764,54L764,42L764,31L764,20L764,8L764,-2L764,-13L764,-20M1004,-20L1004,-19L1006,-17L1010,-16L1013,-16L1014,-17L1019,-19L1020,-20M1027,-20L1028,-17L1028,-16L1031,-14L1032,-15L1033,-16L1033,-17L1033,-20M1140,-20L1140,-18L1138,-14L1137,-13L1135,-11L1132,-9L1132,-9L1135,-7L1136,-6L1137,-5L1136,-5L1135,-3L1137,-2L1139,-1L1140,0L1142,3L1143,4L1143,5L1144,5L1145,4L1147,3L1148,2L1150,4L1143,7L1139,8L1128,12L1118,15L1116,16L1111,18L1108,19L1100,22L1096,23L1093,24L1086,27L1079,29L1072,31L1063,33L1059,35L1055,36L1048,39L1048,40L1048,42L1049,46L1051,50L1052,52L1053,58L1054,62M1084,308L1081,306L1077,305L1072,304L1065,304L1056,306L1047,304L1037,300L1029,299L1019,301L1018,301L1017,299L1014,296L1009,296L1008,295L1007,294L1006,293L1006,291L1007,286L1007,286L1005,285L1003,285L997,283L990,280L978,278L973,278L972,277L970,275L968,270L966,266L961,261L960,259L960,254L961,251L961,248L961,245L961,242L961,239L960,238L958,238L953,237L947,237L946,234L946,228L945,225L943,223L940,222L934,219L926,216L919,211L911,204L908,203L905,197L901,186L901,183L901,181L896,176L895,173L894,171L887,163L885,160L883,156L882,152L880,151L878,149L877,146L876,144L876,141L877,140L884,141L887,142L890,141L894,142L898,145L903,146L907,144L914,144L922,148L929,149L938,146L945,137L952,129L959,120L963,113L969,107L977,103L985,99L997,94L1000,90L1001,86L1001,80L1001,76L1003,75L1005,73L1007,72L1016,67L1022,64L1031,62L1040,62L1049,62L1054,62L1054,68L1054,74L1055,75L1062,75L1072,76L1083,76L1089,81L1091,82L1098,83L1107,91L1117,91L1124,94L1131,96L1134,99L1137,100L1140,100L1141,101L1141,103L1139,107L1139,112L1142,120L1143,127L1142,139L1142,150L1142,154L1142,157L1143,158L1143,160L1141,165L1140,170L1140,172L1139,173L1138,175L1134,177L1133,179L1133,181L1133,183L1135,184L1137,185L1138,187L1138,189L1137,192L1136,197L1137,204L1140,208L1142,212L1143,215L1143,217L1143,219L1139,228L1136,233L1132,239L1127,242L1126,244L1125,246L1125,250L1125,255L1121,262L1124,267L1123,268L1122,269L1116,275L1109,282L1105,287L1100,293L1094,299L1089,304L1084,308L1085,310L1085,311L1086,316L1089,324L1091,331L1093,341L1093,347L1093,349L1095,351L1098,356L1099,358L1099,360L1102,364L1104,370L1106,377L1107,381L1108,382L1108,385L1108,392L1108,400L1108,409L1108,416L1108,420L1108,430L1106,435L1106,440L1107,442L1108,443L1111,445L1111,448L1111,452L1110,455L1111,457L1112,461L1113,464L1113,476L1112,476L1110,475L1109,475L1108,481L1107,489L1107,494L1100,494L1091,494L1084,492L1077,487L1072,479L1070,474L1068,474L1067,473L1067,468L1067,461L1068,460L1073,452L1076,448L1078,443L1082,438L1086,435L1088,434L1089,434L1096,439L1104,443L1106,443L1107,442M1113,476L1116,476L1121,477L1125,477L1129,477L1136,477L1139,477M574,545L576,543L580,540L583,539L584,540L585,539L586,537L586,534L587,531L588,530L589,526L591,524L595,522L598,524L600,526L600,529L602,530L604,530L606,532L607,535L606,537L605,539L605,541L607,543L608,545L609,548L614,550L617,551L622,551L627,553L631,555L638,556L648,555L656,555L663,557L668,558L671,556L672,554L671,551L673,550L676,549L679,547L681,544L685,541L692,539L696,539L696,533L696,516L696,499L696,481L696,464L696,447L696,430L696,413L696,397L697,399L708,407L711,411L713,414L717,425L721,434L724,441L724,444L724,447L725,449L724,450L722,454L720,457L718,461L718,466L718,472L720,476L722,477L726,475L729,475L733,477L746,476L748,476L753,477L755,476L756,475L758,471L759,470L762,469L766,468L768,466L773,459L781,452L784,451L786,449L787,447L790,439L793,432L793,428L795,423L798,420L800,418L801,418L805,417L809,416L813,417L817,419L823,422L828,427L830,429L833,430L837,430L841,430L845,434L848,434L853,436L860,437L864,437L868,435L871,434L876,435L880,434L883,433L886,431L888,429L891,422L892,417L895,411L898,403L899,398L900,396L904,395L907,393L916,391L918,390L920,387L924,383L929,379L931,377L936,359L937,357L940,352L942,350L943,350L945,349L948,347L951,345L954,344L956,343L957,340L959,339L962,339L963,338L963,336L965,335L968,333L969,332L969,330L972,326L979,319L984,315L990,315L995,313L1000,311L1004,308L1006,304L1010,301L1018,301M997,604L1002,601L1005,600L1007,598L1009,597L1010,592L1011,588L1012,586L1014,585L1016,583L1018,578L1019,573L1019,571L1018,569L1017,567L1016,564L1015,563L1012,562L1008,558L1004,556L1001,551L999,551L996,548L995,546L994,544L993,544L991,544L988,545L979,548L974,552L970,555L966,557L962,558L960,562L957,566L955,569L954,571L953,572L952,574L949,578L947,581L944,582L940,584L939,585L939,586L940,590L942,593L944,597L945,600L948,604L949,606L949,610L950,611L950,612L951,613L952,613L954,614L954,615L956,616L957,618L960,621L963,624L968,625L972,625L973,625L975,623L976,621L976,618L977,616L982,608L985,606L986,605L989,605L991,605L993,605L994,605L997,604M877,140L876,139L865,141L861,142L852,149L850,148L848,147L846,146L842,148L838,150L834,153L830,155L829,157L824,162L822,163L820,164L820,163L819,161L815,155L810,148L808,147L807,147L803,147L791,150L781,151L766,154L749,157L739,158L730,159L730,166L730,181L730,196L730,210L730,225L730,240L730,255L730,270L730,285L730,292L730,293L725,293L713,293L703,293L696,293L696,302L696,313L696,324L696,334L696,345L696,356L696,367L696,378L696,388L696,396L696,397M413,120L418,119L422,117L425,117L429,119L432,119L434,118L440,119L444,117L448,115L451,113L454,112L459,110L462,110L465,111L470,111L472,112L475,116L480,119L483,121L487,124L488,125L490,126L491,126L498,125L504,125L511,125L525,125L538,125L551,125L564,125L577,125L590,125L603,125L617,125L622,125L631,125L641,125L642,126L643,126L644,127L648,132L652,136L656,139L660,140L665,140L669,140L675,141L684,142L693,143L703,142L710,143L714,145L718,147L722,148L728,147L735,145L741,146L743,147L745,147L755,145L764,144L776,141L787,139L802,136L813,134M1150,4L1152,6L1157,14L1161,19L1165,24L1166,24L1167,23L1169,22L1177,21L1179,21L1181,20L1185,19L1189,18L1190,19L1195,25L1196,30L1197,37L1197,40L1197,45L1196,50L1193,57L1192,60L1190,65L1187,67L1186,69L1186,71L1188,73L1190,76L1191,78L1191,80L1191,82L1192,84L1193,85L1196,87L1199,91L1204,96L1210,102L1213,105L1215,105L1216,107L1215,110L1214,112L1214,114L1215,115L1216,116L1219,116L1221,115L1222,115L1222,104L1220,98L1218,96L1218,95L1218,93L1220,89L1222,84L1223,82L1224,81L1233,80L1236,79L1238,77L1239,74L1240,64L1240,54L1240,49L1241,41L1243,36L1242,35L1241,28L1236,21L1229,11L1225,6L1220,0L1212,-8L1209,-11L1207,-12L1200,-13L1199,-15L1197,-18L1197,-20"/>
+    <path class="m-band-glow" d="M-196.8,-32.6L-128.1,-7.9L-59.3,16.9L9.4,41.8L78.2,68.5L146.9,95.4L181.3,109.7L215.7,124.1L224.3,127.7L232.8,131.3L241.4,134.9L250.0,138.5L258.6,142.1L267.2,145.8L275.8,149.4L284.4,154.8L293.0,158.4L301.6,162.0L310.2,165.7L318.8,169.3L327.4,172.9L336.0,176.5L344.6,180.2L353.2,183.8L361.7,187.4L370.3,191.1L378.9,196.5L387.5,200.2L396.1,203.8L404.7,207.5L413.3,211.1L421.9,214.8L430.5,218.4L439.1,223.9L447.7,227.6L456.3,231.3L464.9,234.9L473.5,238.6L482.1,244.1L490.6,247.8L499.2,251.5L507.8,255.1L516.4,260.7L525.0,264.3L533.6,268.0L542.2,271.7L550.8,275.4L559.4,281.0L568.0,284.7L576.6,288.4L585.2,293.9L593.8,297.6L602.4,301.3L610.9,305.0L619.5,310.6L628.1,314.3L636.7,318.1L645.3,323.7L653.9,327.4L662.5,331.1L671.1,336.7L679.7,340.5L688.3,344.2L696.9,349.8L705.5,353.6L714.1,357.3L722.7,363.0L731.3,366.7L739.8,370.5L748.4,376.1L757.0,379.9L765.6,385.6L774.2,389.3L782.8,393.1L791.4,398.8L800.0,402.6L808.6,406.4L817.2,412.1L825.8,415.9L834.4,421.6L843.0,425.4L851.6,431.1L860.2,434.9L868.7,438.7L877.3,444.5L885.9,448.3L894.5,454.0L903.1,457.9L911.7,461.7L920.3,467.5L928.9,471.3L937.5,477.1L946.1,480.9L954.7,486.7L963.3,490.6L971.9,496.4L980.5,500.3L989.1,504.1L997.6,510.0L1006.2,513.8L1014.8,519.7L1023.4,523.6L1032.0,529.4L1040.6,533.3L1049.2,537.2L1057.8,543.1L1066.4,547.0L1075.0,552.9L1083.6,556.8L1092.2,562.7L1100.8,566.6L1109.4,572.5L1117.9,576.5L1126.5,580.4L1135.1,586.4L1143.7,590.3L1152.3,596.3L1160.9,600.2L1169.5,606.2L1178.1,610.2L1186.7,614.1L1195.3,620.1L1203.9,624.1L1212.5,630.1L1221.1,634.1L1229.7,638.1L1238.3,644.1L1246.8,648.2L1255.4,654.2L1264.0,658.2L1272.6,662.2L1281.2,668.3L1289.8,672.3L1298.4,676.4L1307.0,682.5L1315.6,686.5L1590.6,835.7L1659.3,869.8L1728.1,902.0L1796.8,934.6L1865.6,965.3L1865.6,1038.9L1796.8,1007.5L1728.1,974.1L1659.3,941.2L1590.6,906.4L1315.6,754.1L1307.0,750.0L1298.4,743.8L1289.8,739.7L1281.2,735.6L1272.6,729.4L1264.0,725.3L1255.4,719.1L1246.8,715.1L1238.3,708.9L1229.7,704.8L1221.1,700.8L1212.5,694.7L1203.9,690.6L1195.3,684.5L1186.7,680.4L1178.1,674.4L1169.5,670.3L1160.9,664.3L1152.3,660.2L1143.7,656.2L1135.1,650.2L1126.5,646.1L1117.9,640.1L1109.4,636.1L1100.8,630.1L1092.2,626.1L1083.6,620.1L1075.0,616.1L1066.4,610.2L1057.8,606.2L1049.2,600.2L1040.6,596.3L1032.0,590.3L1023.4,586.4L1014.8,580.4L1006.2,576.5L997.6,570.6L989.1,566.6L980.5,560.7L971.9,556.8L963.3,550.9L954.7,547.0L946.1,541.1L937.5,537.2L928.9,531.4L920.3,527.5L911.7,521.6L903.1,517.7L894.5,511.9L885.9,508.0L877.3,502.2L868.7,498.3L860.2,492.5L851.6,488.7L843.0,482.9L834.4,479.0L825.8,473.2L817.2,469.4L808.6,463.6L800.0,459.8L791.4,454.0L782.8,450.2L774.2,444.5L765.6,440.6L757.0,434.9L748.4,431.1L739.8,425.4L731.3,421.6L722.7,417.8L714.1,412.1L705.5,408.3L696.9,402.6L688.3,398.8L679.7,393.1L671.1,389.3L662.5,385.6L653.9,379.9L645.3,376.1L636.7,370.5L628.1,366.7L619.5,363.0L610.9,357.3L602.4,353.6L593.8,348.0L585.2,344.2L576.6,340.5L568.0,334.9L559.4,331.1L550.8,327.4L542.2,321.8L533.6,318.1L525.0,314.3L516.4,308.8L507.8,305.0L499.2,301.3L490.6,295.8L482.1,292.1L473.5,288.4L464.9,284.7L456.3,279.1L447.7,275.4L439.1,271.7L430.5,266.2L421.9,262.5L413.3,258.8L404.7,255.1L396.1,249.6L387.5,245.9L378.9,242.3L370.3,238.6L361.7,234.9L353.2,229.4L344.6,225.8L336.0,222.1L327.4,218.4L318.8,214.8L310.2,209.3L301.6,205.7L293.0,202.0L284.4,198.4L275.8,194.7L267.2,191.1L258.6,187.4L250.0,183.8L241.4,178.4L232.8,174.7L224.3,171.1L215.7,167.5L181.3,153.0L146.9,138.5L78.2,109.7L9.4,81.0L-59.3,54.2L-128.1,27.6L-196.8,2.7Z" filter="url(#m-glow)"/>
+    <path class="m-band" d="M-196.8,-32.6L-128.1,-7.9L-59.3,16.9L9.4,41.8L78.2,68.5L146.9,95.4L181.3,109.7L215.7,124.1L224.3,127.7L232.8,131.3L241.4,134.9L250.0,138.5L258.6,142.1L267.2,145.8L275.8,149.4L284.4,154.8L293.0,158.4L301.6,162.0L310.2,165.7L318.8,169.3L327.4,172.9L336.0,176.5L344.6,180.2L353.2,183.8L361.7,187.4L370.3,191.1L378.9,196.5L387.5,200.2L396.1,203.8L404.7,207.5L413.3,211.1L421.9,214.8L430.5,218.4L439.1,223.9L447.7,227.6L456.3,231.3L464.9,234.9L473.5,238.6L482.1,244.1L490.6,247.8L499.2,251.5L507.8,255.1L516.4,260.7L525.0,264.3L533.6,268.0L542.2,271.7L550.8,275.4L559.4,281.0L568.0,284.7L576.6,288.4L585.2,293.9L593.8,297.6L602.4,301.3L610.9,305.0L619.5,310.6L628.1,314.3L636.7,318.1L645.3,323.7L653.9,327.4L662.5,331.1L671.1,336.7L679.7,340.5L688.3,344.2L696.9,349.8L705.5,353.6L714.1,357.3L722.7,363.0L731.3,366.7L739.8,370.5L748.4,376.1L757.0,379.9L765.6,385.6L774.2,389.3L782.8,393.1L791.4,398.8L800.0,402.6L808.6,406.4L817.2,412.1L825.8,415.9L834.4,421.6L843.0,425.4L851.6,431.1L860.2,434.9L868.7,438.7L877.3,444.5L885.9,448.3L894.5,454.0L903.1,457.9L911.7,461.7L920.3,467.5L928.9,471.3L937.5,477.1L946.1,480.9L954.7,486.7L963.3,490.6L971.9,496.4L980.5,500.3L989.1,504.1L997.6,510.0L1006.2,513.8L1014.8,519.7L1023.4,523.6L1032.0,529.4L1040.6,533.3L1049.2,537.2L1057.8,543.1L1066.4,547.0L1075.0,552.9L1083.6,556.8L1092.2,562.7L1100.8,566.6L1109.4,572.5L1117.9,576.5L1126.5,580.4L1135.1,586.4L1143.7,590.3L1152.3,596.3L1160.9,600.2L1169.5,606.2L1178.1,610.2L1186.7,614.1L1195.3,620.1L1203.9,624.1L1212.5,630.1L1221.1,634.1L1229.7,638.1L1238.3,644.1L1246.8,648.2L1255.4,654.2L1264.0,658.2L1272.6,662.2L1281.2,668.3L1289.8,672.3L1298.4,676.4L1307.0,682.5L1315.6,686.5L1590.6,835.7L1659.3,869.8L1728.1,902.0L1796.8,934.6L1865.6,965.3L1865.6,1038.9L1796.8,1007.5L1728.1,974.1L1659.3,941.2L1590.6,906.4L1315.6,754.1L1307.0,750.0L1298.4,743.8L1289.8,739.7L1281.2,735.6L1272.6,729.4L1264.0,725.3L1255.4,719.1L1246.8,715.1L1238.3,708.9L1229.7,704.8L1221.1,700.8L1212.5,694.7L1203.9,690.6L1195.3,684.5L1186.7,680.4L1178.1,674.4L1169.5,670.3L1160.9,664.3L1152.3,660.2L1143.7,656.2L1135.1,650.2L1126.5,646.1L1117.9,640.1L1109.4,636.1L1100.8,630.1L1092.2,626.1L1083.6,620.1L1075.0,616.1L1066.4,610.2L1057.8,606.2L1049.2,600.2L1040.6,596.3L1032.0,590.3L1023.4,586.4L1014.8,580.4L1006.2,576.5L997.6,570.6L989.1,566.6L980.5,560.7L971.9,556.8L963.3,550.9L954.7,547.0L946.1,541.1L937.5,537.2L928.9,531.4L920.3,527.5L911.7,521.6L903.1,517.7L894.5,511.9L885.9,508.0L877.3,502.2L868.7,498.3L860.2,492.5L851.6,488.7L843.0,482.9L834.4,479.0L825.8,473.2L817.2,469.4L808.6,463.6L800.0,459.8L791.4,454.0L782.8,450.2L774.2,444.5L765.6,440.6L757.0,434.9L748.4,431.1L739.8,425.4L731.3,421.6L722.7,417.8L714.1,412.1L705.5,408.3L696.9,402.6L688.3,398.8L679.7,393.1L671.1,389.3L662.5,385.6L653.9,379.9L645.3,376.1L636.7,370.5L628.1,366.7L619.5,363.0L610.9,357.3L602.4,353.6L593.8,348.0L585.2,344.2L576.6,340.5L568.0,334.9L559.4,331.1L550.8,327.4L542.2,321.8L533.6,318.1L525.0,314.3L516.4,308.8L507.8,305.0L499.2,301.3L490.6,295.8L482.1,292.1L473.5,288.4L464.9,284.7L456.3,279.1L447.7,275.4L439.1,271.7L430.5,266.2L421.9,262.5L413.3,258.8L404.7,255.1L396.1,249.6L387.5,245.9L378.9,242.3L370.3,238.6L361.7,234.9L353.2,229.4L344.6,225.8L336.0,222.1L327.4,218.4L318.8,214.8L310.2,209.3L301.6,205.7L293.0,202.0L284.4,198.4L275.8,194.7L267.2,191.1L258.6,187.4L250.0,183.8L241.4,178.4L232.8,174.7L224.3,171.1L215.7,167.5L181.3,153.0L146.9,138.5L78.2,109.7L9.4,81.0L-59.3,54.2L-128.1,27.6L-196.8,2.7Z"/>
+    <path class="m-center" d="M-196.8,-15.0L-128.1,9.8L-59.3,35.6L9.4,61.4L78.2,89.1L146.9,116.9L181.3,131.3L215.7,145.8L224.3,149.4L232.8,153.0L241.4,156.6L250.0,161.1L258.6,164.8L267.2,168.4L275.8,172.0L284.4,176.5L293.0,180.2L301.6,183.8L310.2,187.4L318.8,192.0L327.4,195.6L336.0,199.3L344.6,202.9L353.2,206.6L361.7,211.1L370.3,214.8L378.9,219.4L387.5,223.0L396.1,226.7L404.7,231.3L413.3,234.9L421.9,238.6L430.5,242.3L439.1,247.8L447.7,251.5L456.3,255.1L464.9,259.7L473.5,263.4L482.1,268.0L490.6,271.7L499.2,276.3L507.8,280.0L516.4,284.7L525.0,289.3L533.6,293.0L542.2,296.7L550.8,301.3L559.4,306.0L568.0,309.7L576.6,314.3L585.2,319.0L593.8,322.7L602.4,327.4L610.9,331.1L619.5,336.7L628.1,340.5L636.7,344.2L645.3,349.8L653.9,353.6L662.5,358.3L671.1,363.0L679.7,366.7L688.3,371.4L696.9,376.1L705.5,380.8L714.1,384.6L722.7,390.3L731.3,394.1L739.8,397.9L748.4,403.5L757.0,407.3L765.6,413.0L774.2,416.8L782.8,421.6L791.4,426.3L800.0,431.1L808.6,434.9L817.2,440.6L825.8,444.5L834.4,450.2L843.0,454.0L851.6,459.8L860.2,463.6L868.7,468.4L877.3,473.2L885.9,478.1L894.5,482.9L903.1,487.7L911.7,491.6L920.3,497.4L928.9,501.2L937.5,507.0L946.1,510.9L954.7,516.8L963.3,520.6L971.9,526.5L980.5,530.4L989.1,535.3L997.6,540.2L1006.2,545.0L1014.8,549.9L1023.4,554.8L1032.0,559.8L1040.6,564.7L1049.2,568.6L1057.8,574.5L1066.4,578.5L1075.0,584.4L1083.6,588.3L1092.2,594.3L1100.8,598.2L1109.4,604.2L1117.9,608.2L1126.5,613.1L1135.1,618.1L1143.7,623.1L1152.3,628.1L1160.9,632.1L1169.5,638.1L1178.1,642.1L1186.7,647.1L1195.3,652.2L1203.9,657.2L1212.5,662.2L1221.1,667.3L1229.7,671.3L1238.3,676.4L1246.8,681.5L1255.4,686.5L1264.0,691.6L1272.6,695.7L1281.2,701.8L1289.8,705.9L1298.4,709.9L1307.0,716.1L1315.6,720.2L1590.6,870.9L1659.3,905.3L1728.1,937.9L1796.8,970.8L1865.6,1001.9"/>
+    <circle class="m-dot" cx="531.5" cy="287.6" r="4"/><circle class="m-dot" cx="596.5" cy="314.7" r="4"/><circle class="m-dot" cx="1075.7" cy="594.7" r="4"/>
+    <text class="m-city" x="610.5" y="338.7">Windhoek</text>
+    <text class="m-city" x="1091.7" y="600.7">Durban</text>
+    <text class="m-country" x="570.9" y="355.7">Namibia</text><text class="m-country" x="851.2" y="269.1">Botswana</text><text class="m-country" x="766.9" y="664.1">South Africa</text><text class="m-country m-small" x="976.2" y="640.3">Lesotho</text>
+    <text class="m-ocean" x="394.4" y="580.4">Atlantic Ocean</text><text class="m-ocean" x="1205.6" y="745.9">Indian Ocean</text>
+  </svg>
+  <div class="hero-inner">
+    <p class="kicker">25 November 2030 &middot; Namibia &middot; Botswana &middot; South Africa &middot; Lesotho</p>
+    <h1>Africa Eclipse 2030</h1>
+    <p class="lede">At dawn the Moon&rsquo;s shadow rises out of the Atlantic and races across the Namib, the Kalahari and the Drakensberg to the Indian Ocean in under twenty minutes. The gathering beneath it is being built by the people who show up. Find your place, and help shape it.</p>
+
+    <div class="countdown" role="timer" aria-live="off" aria-label="Countdown to totality in Namibia">
+      <div class="unit"><div class="num" id="cd-days">0</div><div class="label">Days</div></div>
+      <div class="unit"><div class="num" id="cd-hours">00</div><div class="label">Hours</div></div>
+      <div class="unit"><div class="num" id="cd-mins">00</div><div class="label">Minutes</div></div>
+      <div class="unit"><div class="num" id="cd-secs">00</div><div class="label">Seconds</div></div>
+    </div>
+    <p class="until">until totality over Spitzkoppe, Namibia, 25 November 2030 at 7:17 am CAT</p>
+
+    <div class="ctas">
+      <button class="btn btn-primary" type="button" id="openSignup" aria-haspopup="dialog">Get updates</button>
+    </div>
+  </div>
+
+  <span class="place">Spitzkoppe, Namibia</span>
+  <span class="powered">Powered by <a href="https://imxp.org" target="_blank" rel="noopener" aria-label="IMXP, Immersive Experiences"><img src="assets/imxp-monogram-white.png" alt="IMXP" width="73" height="17"></a></span>
+  <span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Spitzkoppe_Sonnenaufgang.jpg" target="_blank" rel="noopener">Ikiwaner</a>, GFDL</span>
+</header>
+
+<div class="modal" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="signupTitle" hidden>
+  <div class="modal-card">
+    <button class="modal-close" type="button" id="closeSignup" aria-label="Close">&times;</button>
+    <h2 id="signupTitle">Get updates</h2>
+    <p>Be first to hear about the path, the gathering and how to help shape it.</p>
+    <form class="signup" id="signupForm" novalidate>
+      <label>First name<input type="text" name="first_name" id="suName" autocomplete="given-name"></label>
+      <label>Email<input type="email" name="email" id="suEmail" autocomplete="email" required></label>
+      <button class="btn btn-primary" type="submit" id="suSubmit">Sign me up</button>
+      <div class="form-note" id="suNote" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Totality at Spitzkoppe: 25 Nov 2030, 7:17 am CAT (UTC+2) = 05:17 UTC
+  (function () {
+    var target = Date.UTC(2030, 10, 25, 5, 17, 0);
+    var el = {
+      d: document.getElementById('cd-days'),
+      h: document.getElementById('cd-hours'),
+      m: document.getElementById('cd-mins'),
+      s: document.getElementById('cd-secs')
+    };
+    function pad(n) { return n < 10 ? '0' + n : String(n); }
+    function tick() {
+      var diff = Math.max(0, target - Date.now());
+      var s = Math.floor(diff / 1000);
+      el.d.textContent = Math.floor(s / 86400);
+      el.h.textContent = pad(Math.floor((s % 86400) / 3600));
+      el.m.textContent = pad(Math.floor((s % 3600) / 60));
+      el.s.textContent = pad(s % 60);
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+</script>
+
+<!--
+  Customer.io (Data Pipelines) JavaScript source.
+  Write key = the "Africa Eclipse" workspace's JavaScript source. Write keys are public by design (send-only).
+-->
+<script>
+  !function(){var i="cioanalytics", analytics=(window[i]=window[i]||[]);if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.setAttribute('data-global-customerio-analytics-key', i);t.src="https://cdp.customer.io/v1/analytics-js/snippet/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._writeKey=key;analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.15.3";
+    analytics.load("a891da0a2fd6901ea3d7");
+    analytics.page();
+  }}();
+</script>
+
+<script>
+  // Get updates: modal + Customer.io identify/track
+  (function () {
+    var modal = document.getElementById('signupModal');
+    var openBtn = document.getElementById('openSignup');
+    var closeBtn = document.getElementById('closeSignup');
+    var form = document.getElementById('signupForm');
+    var nameEl = document.getElementById('suName');
+    var emailEl = document.getElementById('suEmail');
+    var submit = document.getElementById('suSubmit');
+    var note = document.getElementById('suNote');
+
+    function open() { modal.hidden = false; modal.classList.add('open'); setTimeout(function () { (nameEl.value ? emailEl : nameEl).focus(); }, 30); }
+    function close() { modal.classList.remove('open'); modal.hidden = true; openBtn.focus(); }
+    openBtn.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+    if (location.hash === '#updates') open();
+
+    function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = emailEl.value.trim().toLowerCase();
+      var first = nameEl.value.trim();
+      note.className = 'form-note';
+      if (!validEmail(email)) { note.textContent = 'Please enter a valid email address.'; note.className = 'form-note error'; emailEl.focus(); return; }
+
+      submit.disabled = true; note.textContent = 'Signing you up…';
+      var traits = { email: email, source: 'africa-eclipse-2030-splash', subscribed_africa_eclipse_2030: true };
+      if (first) traits.first_name = first;
+
+      var cio = window.cioanalytics;
+      var done = false;
+      function finish() {
+        if (done) return; done = true;
+        form.innerHTML = '<p style="font-size:17px;color:var(--ink)">You&rsquo;re on the list. We&rsquo;ll be in touch as the path and the gathering take shape.</p>';
+      }
+      try {
+        cio.identify(email, traits);
+        cio.track('Signed Up For Updates', { list: 'Africa Eclipse 2030', page: location.href }, {}, finish);
+      } catch (err) { /* fall through */ }
+      setTimeout(finish, 2500); // don't leave people waiting if the tracker is blocked
+    });
+  })();
+</script>
+</body>
+</html>
