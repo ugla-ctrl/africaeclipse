@@ -1,22 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YGVN9DD20G"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-YGVN9DD20G");</script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YGVN9DD20G"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-YGVN9DD20G");</script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Africa Eclipse | Total Solar Eclipse, November 25, 2030</title>
 <meta name="description" content="On 25 November 2030 a total solar eclipse crosses Namibia, Botswana, South Africa and Lesotho at dawn. Africa Eclipse 2030 is a gathering beneath it, built by the people who show up.">
-<meta name="theme-color" content="#14100c">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
-<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#060E19">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="canonical" href="https://africaeclipse.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://africaeclipse.com/">
@@ -25,30 +17,40 @@
 <meta property="og:description" content="A total solar eclipse at dawn across Namibia, Botswana, South Africa and Lesotho. Find your place, and help shape the gathering.">
 <meta property="og:image" content="https://africaeclipse.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Africa Eclipse 2030: the path of totality over southern Africa, above Spitzkoppe at dawn">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Africa Eclipse 2030: a total eclipse over the Drakensberg Amphitheatre in South Africa">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Africa Eclipse | November 25, 2030">
 <meta name="twitter:description" content="A total solar eclipse at dawn across Namibia, Botswana, South Africa and Lesotho. Find your place, and help shape the gathering.">
 <meta name="twitter:image" content="https://africaeclipse.com/assets/og-image.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","@id":"https://africaeclipse.com/#website","url":"https://africaeclipse.com/","name":"Africa Eclipse 2030"},
+ {"@type":"Event","@id":"https://africaeclipse.com/#event","name":"Africa Eclipse 2030","description":"The total solar eclipse of 25 November 2030 crosses Namibia, Botswana, South Africa and Lesotho at dawn. A community-built gathering in the path of totality.","startDate":"2030-11-25","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","image":"https://africaeclipse.com/assets/og-image.jpg","url":"https://africaeclipse.com/","location":{"@type":"Place","name":"Path of totality, southern Africa","address":{"@type":"PostalAddress","addressCountry":"NA"}},"organizer":{"@type":"Organization","name":"IMXP","url":"https://imxp.org"}}
+]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Lexend+Zetta:wght@200;300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #14100c;
-    --ink: #f3efe6;
+    --bg: #060E19;        /* Night */
+    --ink: #F3EFE6;       /* Ink */
     --ink-soft: rgba(243, 239, 230, 0.82);
     --ink-quiet: rgba(243, 239, 230, 0.6);
-    --gold: #e9b45c;
-    --accent: #ff8a1e;
-    --accent-ink: #17120b;
-    --line: rgba(243, 239, 230, 0.18);
+    --gold: #F2A65A;      /* Corona */
+    --accent: #E2502A;    /* Ember */
+    --accent-ink: #060E19;
+    --dusk: #2E1B3D;
+    --line: rgba(243, 239, 230, 0.16);
+    --display: "Lexend Zetta", "Geist", system-ui, sans-serif;
+    --sans: "Geist", system-ui, -apple-system, sans-serif;
+    --mono: "Geist Mono", ui-monospace, Menlo, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: var(--bg); color: var(--ink); }
   body {
-    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-family: var(--sans);
     font-size: 16px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -60,20 +62,15 @@
     position: fixed; inset: 0 0 auto 0; z-index: 10;
     display: flex; align-items: center; gap: 14px;
     height: 66px; padding: 0 32px;
-    background: rgba(20, 16, 12, 0.72);
+    background: rgba(6, 14, 25, 0.72);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
-  .mark {
-    width: 32px; height: 32px; border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, #0b0806 54%, #ffd89a 58%, rgba(255, 138, 30, 0.35) 66%, transparent 72%);
-    box-shadow: 0 0 0 1px rgba(233, 180, 92, 0.6);
-    flex: none;
-  }
+  .mark { display: block; width: 30px; height: 30px; flex: none; }
   .wordmark {
-    font-size: 14px; font-weight: 600;
-    letter-spacing: 0.18em; text-transform: uppercase;
+    font-family: var(--mono); font-size: 13px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase;
   }
 
   /* Hero */
@@ -84,61 +81,56 @@
     text-align: center; overflow: hidden;
     background: var(--bg);
   }
-  .hero-bg { position: absolute; inset: 0; overflow: hidden; }
-  .hero-bg .slide {
-    position: absolute; inset: 0;
-    background: center 58% / cover no-repeat;
-    opacity: 0;
-    filter: brightness(0.5) contrast(0.92) saturate(1.05);
-    transition: opacity 2.6s ease;
-    will-change: opacity;
-  }
-  .hero-bg .slide.is-active { opacity: 1; }
   .hero::before {
-    content: ""; position: absolute; inset: 0;
+    content: ""; position: absolute; inset: 0; z-index: 1;
     background:
-      linear-gradient(180deg, rgba(20, 16, 12, 0.86) 0%, rgba(20, 16, 12, 0.78) 38%, rgba(20, 16, 12, 0.8) 72%, rgba(20, 16, 12, 0.96) 100%),
-      radial-gradient(ellipse 72% 78% at 50% 48%, rgba(20, 16, 12, 0.55), rgba(20, 16, 12, 0) 78%);
+      linear-gradient(180deg, rgba(6, 14, 25, 0.74) 0%, rgba(6, 14, 25, 0.58) 38%, rgba(6, 14, 25, 0.66) 72%, rgba(6, 14, 25, 0.92) 100%);
   }
-  .hero-inner { position: relative; max-width: 1200px; }
+  .hero-inner { position: relative; z-index: 3; max-width: 1200px; }
   .kicker {
-    font-size: 14px; font-weight: 500;
+    font-family: var(--mono); font-size: 13px; font-weight: 500;
     letter-spacing: 0.32em; text-transform: uppercase;
     color: var(--gold);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 16px rgba(0, 0, 0, 0.6);
   }
-  h1 {
-    margin-top: 18px;
-    font-family: Fraunces, "Playfair Display", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(48px, 7.4vw, 104px);
-    line-height: 1.12; letter-spacing: 0.01em;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 28px rgba(0, 0, 0, 0.6);
-  }
+  h1 { margin: 26px auto 0; line-height: 0; }
+  h1 img { display: block; margin: 0 auto; width: min(680px, 84vw); height: auto; filter: drop-shadow(0 2px 22px rgba(0, 0, 0, 0.5)); }
   .lede {
     max-width: 660px; margin: 22px auto 0;
-    font-size: 19px; line-height: 1.6;
+    font-size: 19px; line-height: 1.6; font-weight: 300;
     color: var(--ink-soft);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 16px rgba(0, 0, 0, 0.55);
   }
 
 
   /* Path-of-totality map overlay */
+  /* Rotating location gallery */
+  .bgslides { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .bgslide {
+    position: absolute; inset: 0;
+    background: center 60% / cover no-repeat;
+    opacity: 0; transform: scale(1.06);
+    filter: brightness(0.62) contrast(0.95) saturate(1.05);
+    transition: opacity 2.4s ease-in-out, transform 9s ease-out;
+  }
+  .bgslide.on { opacity: 1; transform: scale(1); }
+  .bgslide.mono { filter: brightness(0.62) contrast(0.95) sepia(0.35) saturate(1.3); }
+
   .hero-map {
-    position: absolute; inset: 0; width: 100%; height: 100%;
+    position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%;
     pointer-events: none;
   }
   .m-grat { fill: none; stroke: rgba(243, 239, 230, 0.07); stroke-width: 1; }
-  .m-land { fill: rgba(243, 239, 230, 0.03); stroke: rgba(243, 239, 230, 0.26); stroke-width: 1.3; stroke-linejoin: round; }
+  .m-land { fill: none; stroke: rgba(243, 239, 230, 0.26); stroke-width: 1.3; stroke-linejoin: round; }
   .m-border { fill: none; stroke: rgba(243, 239, 230, 0.16); stroke-width: 1; stroke-dasharray: 3 5; }
-  .m-band { fill: url(#m-band); stroke: rgba(233, 180, 92, 0.32); stroke-width: 1.2; }
-  .m-band-glow { fill: rgba(255, 138, 30, 0.1); }
-  .m-center { fill: none; stroke: rgba(255, 138, 30, 0.45); stroke-width: 1.4; stroke-dasharray: 2 7; stroke-linecap: round; }
-  .m-dot { fill: #e9b45c; fill-opacity: 0.75; }
-  .m-city { font: 600 15px Inter, system-ui, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; fill: rgba(243, 239, 230, 0.4); }
-  .m-country { font: 500 22px Inter, system-ui, sans-serif; letter-spacing: 0.42em; text-transform: uppercase; fill: rgba(243, 239, 230, 0.12); text-anchor: middle; }
+  .m-band { fill: url(#m-band); stroke: rgba(242, 166, 90, 0.32); stroke-width: 1.2; }
+  .m-band-glow { fill: rgba(226, 80, 42, 0.1); }
+  .m-center { fill: none; stroke: rgba(226, 80, 42, 0.55); stroke-width: 1.4; stroke-dasharray: 2 7; stroke-linecap: round; }
+  .m-dot { fill: #F2A65A; fill-opacity: 0.75; }
+  .m-city { font: 500 14px 'Geist Mono', ui-monospace, monospace; letter-spacing: 0.2em; text-transform: uppercase; fill: rgba(243, 239, 230, 0.4); }
+  .m-country { font: 200 21px 'Lexend Zetta', system-ui, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; fill: rgba(243, 239, 230, 0.12); text-anchor: middle; }
   .m-small { font-size: 15px; letter-spacing: 0.3em; }
-  .m-ocean { font: italic 400 26px Fraunces, Georgia, serif; letter-spacing: 0.08em; fill: rgba(243, 239, 230, 0.2); text-anchor: middle; }
+  .m-ocean { font: 400 16px 'Geist Mono', ui-monospace, monospace; letter-spacing: 0.34em; text-transform: uppercase; fill: rgba(243, 239, 230, 0.24); text-anchor: middle; }
 
   /* Countdown */
   .countdown {
@@ -147,18 +139,19 @@
   }
   .unit { min-width: 72px; }
   .num {
-    font-family: Fraunces, Georgia, serif; font-weight: 500;
-    font-size: clamp(44px, 6vw, 64px); line-height: 1;
+    font-family: var(--display); font-weight: 200;
+    font-size: clamp(30px, 4.6vw, 54px); line-height: 1; letter-spacing: -0.04em;
     font-variant-numeric: tabular-nums;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
   }
   .label {
-    margin-top: 10px;
-    font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    margin-top: 12px; font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--ink-quiet);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   }
-  .until { margin-top: 18px; font-size: 13.5px; color: var(--ink-soft); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
+  .until { margin-top: 20px; font-size: 13.5px; color: var(--ink-soft); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
+  .until-note { max-width: 520px; margin: 6px auto 0; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.04em; color: var(--ink-quiet); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); }
 
   /* Buttons */
   .ctas {
@@ -169,28 +162,28 @@
     display: inline-flex; align-items: center; justify-content: center;
     width: 240px; padding: 13px 28px;
     border: 0; border-radius: 999px; cursor: pointer; font-family: inherit;
-    font-size: 14px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
     transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
   }
   .btn:hover { transform: translateY(-1px); }
   .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
   .btn-primary { background: var(--accent); color: var(--accent-ink); }
-  .btn-primary:hover { background: #ff9d43; }
+  .btn-primary:hover { background: #F2A65A; }
   .btn-ghost { border: 1px solid var(--accent); color: var(--accent); }
-  .btn-ghost:hover { background: rgba(255, 138, 30, 0.12); }
+  .btn-ghost:hover { background: rgba(226, 80, 42, 0.12); }
 
   /* Footer details */
   .place {
-    position: absolute; left: 28px; bottom: 22px;
+    position: absolute; z-index: 3; transition: opacity 0.7s ease; left: 28px; bottom: 22px;
     display: flex; align-items: center; gap: 10px;
-    font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
   }
   .place::before {
     content: ""; width: 8px; height: 8px; border-radius: 50%;
     background: var(--gold); box-shadow: 0 0 10px var(--gold);
   }
   .powered {
-    position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%);
+    position: absolute; z-index: 3; left: 50%; bottom: 20px; transform: translateX(-50%);
     display: flex; align-items: center; gap: 8px;
     font-size: 12px; color: rgba(243, 239, 230, 0.62); white-space: nowrap;
   }
@@ -201,20 +194,20 @@
   .modal {
     position: fixed; inset: 0; z-index: 20;
     display: none; align-items: center; justify-content: center;
-    padding: 16px; background: rgba(10, 8, 6, 0.72);
+    padding: 16px; background: rgba(3, 7, 13, 0.72);
     backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   }
   .modal.open { display: flex; }
   .modal-card {
     position: relative; width: 100%; max-width: 440px;
     padding: 36px 32px 30px; border-radius: 18px;
-    background: #1c1611; border: 1px solid rgba(233, 180, 92, 0.25);
+    background: #0B1624; border: 1px solid rgba(242, 166, 90, 0.25);
     box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
     text-align: center;
   }
   .modal-card h2 {
-    font-family: Fraunces, Georgia, serif; font-weight: 500;
-    font-size: 30px; line-height: 1.2;
+    font-family: var(--display); font-weight: 200; text-transform: uppercase;
+    font-size: 24px; line-height: 1.25; letter-spacing: 0.02em;
   }
   .modal-card p { margin-top: 10px; color: var(--ink-soft); font-size: 15px; }
   .modal-close {
@@ -224,59 +217,64 @@
   }
   .modal-close:hover { color: var(--ink); background: rgba(243, 239, 230, 0.08); }
   .signup { display: grid; gap: 12px; margin-top: 22px; text-align: left; }
-  .signup label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-quiet); }
+  .signup label { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-quiet); }
   .signup input {
     width: 100%; margin-top: 6px; padding: 12px 14px;
     border-radius: 10px; border: 1px solid rgba(243, 239, 230, 0.2);
     background: rgba(243, 239, 230, 0.05); color: var(--ink);
     font: inherit; font-size: 16px;
   }
-  .signup input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(233, 180, 92, 0.2); }
+  .signup input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(242, 166, 90, 0.2); }
   .signup .btn { width: 100%; margin-top: 6px; border: 0; cursor: pointer; font-family: inherit; }
   .signup .btn[disabled] { opacity: 0.6; cursor: default; }
   .form-note { min-height: 20px; font-size: 13.5px; text-align: center; color: var(--ink-soft); }
-  .form-note.error { color: #ff9b7a; }
+  .form-note.error { color: #F2A65A; }
   .credit {
-    position: absolute; right: 24px; bottom: 22px;
+    position: absolute; z-index: 3; transition: opacity 0.7s ease; right: 24px; bottom: 22px;
     font-size: 11px; color: var(--ink-quiet);
   }
   .credit a { text-decoration: underline; text-underline-offset: 2px; }
 
   @media (max-width: 640px) {
     .nav { padding: 0 16px; height: 58px; }
-    .wordmark { font-size: 12.5px; }
+    .wordmark { font-size: 11.5px; letter-spacing: 0.18em; }
+    .mark { width: 26px; height: 26px; }
+    h1 img { width: min(300px, 78vw); }
     .hero { padding-top: 96px; padding-bottom: 120px; }
     .kicker { font-size: 11.5px; letter-spacing: 0.24em; }
     .lede { font-size: 16.5px; }
     .unit { min-width: 56px; }
-    .label { font-size: 10.5px; letter-spacing: 0.16em; }
+    .label { font-size: 10px; letter-spacing: 0.14em; }
+    .until-note { font-size: 11px; }
     .place { left: 16px; bottom: 50px; font-size: 11.5px; }
     .powered { bottom: 18px; }
-    .credit { right: 16px; bottom: 50px; }
+    .credit { right: 16px; bottom: 78px; }
     .m-city, .m-country, .m-ocean { display: none; }
   }
-  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+  .fade { opacity: 0; }
+  @media (prefers-reduced-motion: reduce) { .btn, .bgslide { transition: none; } .bgslide { transform: none; } }
 </style>
 </head>
 <body>
 
 <nav class="nav" aria-label="Site">
-  <span class="mark" aria-hidden="true"></span>
+  <img class="mark" src="assets/brand/africa-eclipse-icon.svg" alt="" width="30" height="30">
   <a class="wordmark" href="#top">Africa Eclipse 2030</a>
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="slide is-active" style="background-image:url('assets/hero-spitzkoppe.jpg')"></div>
-    <div class="slide" style="background-image:url('assets/hero-sossusvlei.jpg')"></div>
-    <div class="slide" style="background-image:url('assets/hero-kgalagadi.jpg')"></div>
-    <div class="slide" style="background-image:url('assets/hero-afriski-lesotho.jpg')"></div>
-    <div class="slide" style="background-image:url('assets/hero-durban.jpg')"></div>
-    <div class="slide" style="background-image:url('assets/hero-windhoek.jpg')"></div>
+  <div class="bgslides" aria-hidden="true">
+    <div class="bgslide on" style="background-image:url('assets/hero-amphitheatre.jpg');background-position:center 30%" data-place="Drakensberg, South Africa" data-credit="PhilippN" data-license="CC BY-SA 3.0, edited" data-href="https://commons.wikimedia.org/wiki/File:Amphitheatre_Drakensberg_View.jpg"></div>
+    <div class="bgslide" data-src="assets/hero-spitzkoppe.jpg" data-place="Spitzkoppe, Namibia" data-credit="Ikiwaner" data-license="GFDL" data-href="https://commons.wikimedia.org/wiki/File:Spitzkoppe_Sonnenaufgang.jpg"></div>
+    <div class="bgslide" data-src="assets/hero-sossusvlei.jpg" data-place="Deadvlei, Sossusvlei, Namibia" data-credit="Diego Delso" data-license="CC BY-SA 4.0" data-href="https://commons.wikimedia.org/wiki/File:Dead_Vlei,_Sossusvlei,_Namibia,_2018-08-06,_DD_085.jpg"></div>
+    <div class="bgslide" data-src="assets/hero-kgalagadi.jpg" data-place="Kgalagadi Transfrontier Park" data-credit="JOBOGAERTS" data-license="CC BY 4.0" data-href="https://commons.wikimedia.org/wiki/File:Kalahari_in_Kgalagadi_Transfrontier_Park_South_Africa_(2).jpg"></div>
+    <div class="bgslide" data-src="assets/hero-afriski-lesotho.jpg" data-place="Maloti Mountains, Lesotho" data-credit="Graham Maclachlan" data-license="CC BY-SA 3.0" data-href="https://commons.wikimedia.org/wiki/File:Afriski_in_Summer,_bring_on_the_winter_-_panoramio.jpg"></div>
+    <div class="bgslide" data-src="assets/hero-windhoek.jpg" data-place="Windhoek, Namibia" data-credit="Bries" data-license="CC BY-SA 2.5" data-href="https://commons.wikimedia.org/wiki/File:Windhoek-Skyline.jpg"></div>
+    <div class="bgslide mono" data-src="assets/hero-durban.jpg" data-place="Durban, South Africa" data-credit="Chris Bloom" data-license="CC BY-SA 2.0" data-href="https://commons.wikimedia.org/wiki/File:Durban_Beachfront_(475914663).jpg"></div>
   </div>
   <svg class="hero-map" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
     <defs>
-      <linearGradient id="m-band" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9b45c" stop-opacity="0.05"/><stop offset="0.5" stop-color="#ff8a1e" stop-opacity="0.16"/><stop offset="1" stop-color="#e9b45c" stop-opacity="0.05"/></linearGradient>
+      <linearGradient id="m-band" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2A65A" stop-opacity="0.05"/><stop offset="0.5" stop-color="#E2502A" stop-opacity="0.18"/><stop offset="1" stop-color="#F2A65A" stop-opacity="0.05"/></linearGradient>
       <filter id="m-glow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="16"/></filter>
     </defs>
     <path class="m-grat" d="M9,920L9,406L9,-20M181,920L181,406L181,-20M353,920L353,406L353,-20M525,920L525,406L525,-20M696,920L696,406L696,-20M868,920L868,406L868,-20M1040,920L1040,406L1040,-20M1212,920L1212,406L1212,-20M1384,920L1384,406L1384,-20M9,804L95,804L181,804L267,804L353,804L439,804L525,804L610,804L696,804L782,804L868,804L954,804L1040,804L1126,804L1212,804L1298,804L1384,804L1470,804L1556,804M9,600L95,600L181,600L267,600L353,600L439,600L525,600L610,600L696,600L782,600L868,600L954,600L1040,600L1126,600L1212,600L1298,600L1384,600L1470,600L1556,600M9,406L95,406L181,406L267,406L353,406L439,406L525,406L610,406L696,406L782,406L868,406L954,406L1040,406L1126,406L1212,406L1298,406L1384,406L1470,406L1556,406M9,220L95,220L181,220L267,220L353,220L439,220L525,220L610,220L696,220L782,220L868,220L954,220L1040,220L1126,220L1212,220L1298,220L1384,220L1470,220L1556,220M9,40L95,40L181,40L267,40L353,40L439,40L525,40L610,40L696,40L782,40L868,40L954,40L1040,40L1126,40L1212,40L1298,40L1384,40L1470,40L1556,40"/>
@@ -293,7 +291,7 @@
   </svg>
   <div class="hero-inner">
     <p class="kicker">25 November 2030 &middot; Namibia &middot; Botswana &middot; South Africa &middot; Lesotho</p>
-    <h1>Africa Eclipse 2030</h1>
+    <h1><picture><source media="(max-width: 640px)" srcset="assets/brand/africa-eclipse-lockup-stacked-ink.svg" width="640" height="340"><img src="assets/brand/africa-eclipse-lockup-horizontal-ink.svg" alt="Africa Eclipse 2030" width="654" height="120"></picture></h1>
     <p class="lede">At dawn the Moon&rsquo;s shadow rises out of the Atlantic and races across the Namib, the Kalahari and the Drakensberg to the Indian Ocean in under twenty minutes. The gathering beneath it is being built by the people who show up. Find your place, and help shape it.</p>
 
     <div class="countdown" role="timer" aria-live="off" aria-label="Countdown to totality in Namibia">
@@ -302,16 +300,17 @@
       <div class="unit"><div class="num" id="cd-mins">00</div><div class="label">Minutes</div></div>
       <div class="unit"><div class="num" id="cd-secs">00</div><div class="label">Seconds</div></div>
     </div>
-    <p class="until">until totality over Spitzkoppe, Namibia, 25 November 2030 at 7:17 am CAT</p>
+    <p class="until">until totality over Spitzkoppe, Namibia, 25&nbsp;November 2030 at 7:17&nbsp;am&nbsp;CAT</p>
+    <p class="until-note">The shadow reaches the Drakensberg 14 minutes later, at 7:31&nbsp;am&nbsp;SAST.</p>
 
     <div class="ctas">
       <button class="btn btn-primary" type="button" id="openSignup" aria-haspopup="dialog">Get updates</button>
     </div>
   </div>
 
-  <span class="place">Spitzkoppe, Namibia</span>
+  <span class="place" id="bgPlace">Drakensberg, South Africa</span>
   <span class="powered">Powered by <a href="https://imxp.org" target="_blank" rel="noopener" aria-label="IMXP, Immersive Experiences"><img src="assets/imxp-monogram-white.png" alt="IMXP" width="73" height="17"></a></span>
-  <span class="credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Spitzkoppe_Sonnenaufgang.jpg" target="_blank" rel="noopener">Ikiwaner</a>, GFDL</span>
+  <span class="credit" id="bgCredit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Amphitheatre_Drakensberg_View.jpg" target="_blank" rel="noopener">PhilippN</a>, CC BY-SA 3.0, edited</span>
 </header>
 
 <div class="modal" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="signupTitle" hidden>
@@ -349,6 +348,32 @@
     }
     tick();
     setInterval(tick, 1000);
+  })();
+</script>
+
+<script>
+  // Rotating location gallery: crossfade every 8s, captions follow; later photos load after the page
+  (function () {
+    var slides = [].slice.call(document.querySelectorAll('.bgslide'));
+    var place = document.getElementById('bgPlace');
+    var credit = document.getElementById('bgCredit');
+    if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function load(el) { if (el.dataset.src) { el.style.backgroundImage = "url('" + el.dataset.src + "')"; delete el.dataset.src; } }
+    window.addEventListener('load', function () { slides.forEach(load); });
+    var i = 0;
+    setInterval(function () {
+      var next = slides[(i + 1) % slides.length];
+      load(next);
+      slides[i].classList.remove('on');
+      next.classList.add('on');
+      i = (i + 1) % slides.length;
+      place.classList.add('fade'); credit.classList.add('fade');
+      setTimeout(function () {
+        place.textContent = next.dataset.place;
+        credit.innerHTML = 'Photo: <a href="' + next.dataset.href + '" target="_blank" rel="noopener">' + next.dataset.credit + '</a>, ' + next.dataset.license;
+        place.classList.remove('fade'); credit.classList.remove('fade');
+      }, 700);
+    }, 8000);
   })();
 </script>
 
@@ -400,7 +425,7 @@
       var done = false;
       function finish() {
         if (done) return; done = true;
-        form.innerHTML = '<p style="font-size:17px;color:var(--ink);text-align:center">You&rsquo;re on the list and we&rsquo;ll be in touch.</p><p style="font-size:14px;color:var(--ink-soft);margin-top:10px;text-align:center">Want to connect before then? <a href="mailto:howzit@africaeclipse.com" style="color:var(--gold);text-decoration:underline">howzit@africaeclipse.com</a></p>';
+        form.innerHTML = '<p style="font-size:17px;color:var(--ink);text-align:center">You&rsquo;re on the list.  We&rsquo;ll be in touch.</p><p style="font-size:14px;color:var(--ink-soft);margin-top:10px;text-align:center">Want to connect before then? <a href="mailto:howzit@africaeclipse.com" style="color:var(--gold);text-decoration:underline">howzit@africaeclipse.com</a></p>';
       }
       try {
         cio.identify(email, traits);
@@ -408,18 +433,6 @@
       } catch (err) { /* fall through */ }
       setTimeout(finish, 2500); // don't leave people waiting if the tracker is blocked
     });
-  })();
-</script>
-<script>
-  (function () {
-    var slides = document.querySelectorAll('.hero-bg .slide');
-    if (slides.length < 2) return;
-    var i = 0;
-    setInterval(function () {
-      slides[i].classList.remove('is-active');
-      i = (i + 1) % slides.length;
-      slides[i].classList.add('is-active');
-    }, 6000);
   })();
 </script>
 </body>
